@@ -1,0 +1,542 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 0: ssh bandit0@bandit.labs.overthewire.org -p 2220
+contraseña: bandit0
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 0 al 1: ssh bandit0@bandit.labs.overthewire.org -p 2220
+contraseña: bandit0
+comandos: 
+
+ls -alps
+cat readme
+
+contraseña encontrada: NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 1 al 2: ssh bandit1@bandit.labs.overthewire.org -p 2220
+contraseña: NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
+comandos: 
+
+ls -alps
+cat ./-
+
+contraseña encontrada: rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 2 al 3: ssh bandit2@bandit.labs.overthewire.org -p 2220
+contraseña: rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
+comandos: 
+
+ls -alps
+cat spaces\ in\ this\ filename
+
+contraseña encontrada: aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 3 al 4: ssh bandit3@bandit.labs.overthewire.org -p 2220
+contraseña: aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG
+comandos: 
+
+ls -alps
+cd inhere/
+ls -al
+cat .hidden
+
+contraseña encontrada: 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 4 al 5: ssh bandit4@bandit.labs.overthewire.org -p 2220
+contraseña: 2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe
+comandos: 
+
+ls -alps
+cd inhere/
+ls
+find . -type f | xargs file
+cat ./-file07
+
+contraseña encontrada: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 5 al 6: ssh bandit5@bandit.labs.overthewire.org -p 2220
+contraseña: lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR
+comandos: 
+
+ls
+cd inhere/
+find . -type f -size 1033c ! -executable
+cat ./maybehere07/.file2
+
+contraseña encontrada: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 6 al 7: ssh bandit6@bandit.labs.overthewire.org -p 2220
+contraseña: P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU
+comandos: 
+
+find / -type f -user bandit7 -group bandit6 -size 33c
+cat /var/lib/dpkg/info/bandit7.passwordcat
+
+contraseña encontrada: z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 7 al 8: ssh bandit7@bandit.labs.overthewire.org -p 2220
+contraseña: z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
+comandos: 
+
+ls -alpt
+strings data.txt | grep "millionth"
+
+contraseña encontrada: TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 8 al 9: ssh bandit8@bandit.labs.overthewire.org -p 2220
+contraseña: TESKZC0XvTetK0S9xNwm25STk5iWrBvP
+comandos: 
+
+cat data.txt
+sort data.txt
+sort data.txt | uniq -c
+
+contraseña encontrada: EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 9 al 10: ssh bandit9@bandit.labs.overthewire.org -p 2220
+contraseña: EN632PlfYiZbn3PhVK3XOGSlNInNE00t
+comandos: 
+
+ls
+strings data.txt | grep "="
+
+contraseña encontrada: G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 10 al 11: ssh bandit10@bandit.labs.overthewire.org -p 2220
+contraseña: G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
+comandos: 
+
+ls
+base64 -d data.txt
+
+contraseña encontrada: 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 11 al 12: ssh bandit11@bandit.labs.overthewire.org -p 2220
+contraseña: 6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
+comandos: 
+
+ls
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m
+
+contraseña encontrada: JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 12 al 13: ssh bandit12@bandit.labs.overthewire.org -p 2220
+contraseña: JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+comandos: 
+
+cat data.txt
+mkdir /tmp/user
+cp data.txt /tmp/user
+cd /tmp/user
+ls
+xxd -r data.txt > data
+ls
+file data
+mv data file.gz
+gzip -d file.gz
+ls
+file file
+mv file file.bz2
+bzip2 -d file.bz2
+ls
+file file
+mv file file.gz
+gzip -d file.gz
+ls
+file file
+mv file file.tar
+tar xf file.tar
+ls
+file data5.bin
+rm file.tar
+rm data.txt
+ls
+mv data5.bin data.tar
+tar xf data.tar
+ls
+file data6.bin
+mv data6.bin data.bz2
+bzip2 -d data.bz2
+ls
+file data
+mv data data.tar
+ls
+tar xf data.tar
+ls
+file data8.bin
+mv data8.bin data.gz
+gzip -d data.gz
+ls
+file data
+cat data
+
+contraseña encontrada: wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 13 al 14: ssh bandit13@bandit.labs.overthewire.org -p 2220
+contraseña: wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
+comandos:
+ 
+ls
+exit
+chmod 600 sshkey.private
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+cat /etc/bandit_pass/bandit14
+
+contraseña encontrada: fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 14 al 15: ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+contraseña: fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
+comandos: 
+
+cat /etc/bandit_pass/bandit14
+nc localhost 30000
+
+contraseña encontrada: jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 15 al 16: ssh bandit15@bandit.labs.overthewire.org -p 2220
+contraseña: jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
+comandos: 
+
+cat /etc/bandit_pass/bandit15
+openssl s_client -connect localhost:30001
+
+contraseña encontrada: JQttfApK4SeyHwDlI9SXGR50qclOAil1
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 16 al 17: ssh bandit16@bandit.labs.overthewire.org -p 2220
+contraseña: JQttfApK4SeyHwDlI9SXGR50qclOAil1
+comandos: 
+
+cat /etc/bandit_pass/bandit16
+nmap localhost -p 31000-32000
+ncat --ssl localhost 31790
+
+contraseña encontrada:
+
+-----BEGIN RSA PRIVATE KEY-----
+MIIEogIBAAKCAQEAvmOkuifmMg6HL2YPIOjon6iWfbp7c3jx34YkYWqUH57SUdyJ
+imZzeyGC0gtZPGujUSxiJSWI/oTqexh+cAMTSMlOJf7+BrJObArnxd9Y7YT2bRPQ
+Ja6Lzb558YW3FZl87ORiO+rW4LCDCNd2lUvLE/GL2GWyuKN0K5iCd5TbtJzEkQTu
+DSt2mcNn4rhAL+JFr56o4T6z8WWAW18BR6yGrMq7Q/kALHYW3OekePQAzL0VUYbW
+JGTi65CxbCnzc/w4+mqQyvmzpWtMAzJTzAzQxNbkR2MBGySxDLrjg0LWN6sK7wNX
+x0YVztz/zbIkPjfkU1jHS+9EbVNj+D1XFOJuaQIDAQABAoIBABagpxpM1aoLWfvD
+KHcj10nqcoBc4oE11aFYQwik7xfW+24pRNuDE6SFthOar69jp5RlLwD1NhPx3iBl
+J9nOM8OJ0VToum43UOS8YxF8WwhXriYGnc1sskbwpXOUDc9uX4+UESzH22P29ovd
+d8WErY0gPxun8pbJLmxkAtWNhpMvfe0050vk9TL5wqbu9AlbssgTcCXkMQnPw9nC
+YNN6DDP2lbcBrvgT9YCNL6C+ZKufD52yOQ9qOkwFTEQpjtF4uNtJom+asvlpmS8A
+vLY9r60wYSvmZhNqBUrj7lyCtXMIu1kkd4w7F77k+DjHoAXyxcUp1DGL51sOmama
++TOWWgECgYEA8JtPxP0GRJ+IQkX262jM3dEIkza8ky5moIwUqYdsx0NxHgRRhORT
+8c8hAuRBb2G82so8vUHk/fur85OEfc9TncnCY2crpoqsghifKLxrLgtT+qDpfZnx
+SatLdt8GfQ85yA7hnWWJ2MxF3NaeSDm75Lsm+tBbAiyc9P2jGRNtMSkCgYEAypHd
+HCctNi/FwjulhttFx/rHYKhLidZDFYeiE/v45bN4yFm8x7R/b0iE7KaszX+Exdvt
+SghaTdcG0Knyw1bpJVyusavPzpaJMjdJ6tcFhVAbAjm7enCIvGCSx+X3l5SiWg0A
+R57hJglezIiVjv3aGwHwvlZvtszK6zV6oXFAu0ECgYAbjo46T4hyP5tJi93V5HDi
+Ttiek7xRVxUl+iU7rWkGAXFpMLFteQEsRr7PJ/lemmEY5eTDAFMLy9FL2m9oQWCg
+R8VdwSk8r9FGLS+9aKcV5PI/WEKlwgXinB3OhYimtiG2Cg5JCqIZFHxD6MjEGOiu
+L8ktHMPvodBwNsSBULpG0QKBgBAplTfC1HOnWiMGOU3KPwYWt0O6CdTkmJOmL8Ni
+blh9elyZ9FsGxsgtRBXRsqXuz7wtsQAgLHxbdLq/ZJQ7YfzOKU4ZxEnabvXnvWkU
+YOdjHdSOoKvDQNWu6ucyLRAWFuISeXw9a/9p7ftpxm0TSgyvmfLF2MIAEwyzRqaM
+77pBAoGAMmjmIJdjp+Ez8duyn3ieo36yrttF5NSsJLAbxFpdlc1gvtGCWW+9Cq0b
+dxviW8+TFVEBl1O4f7HVm6EpTscdDxU+bCXWkfjuRb7Dy9GOtt9JPsX8MBTakzh3
+vBgsyi/sN3RqRBcGU40fOoZyfAMT8s1m/uYv52O6IgeuZ/ujbjY=
+-----END RSA PRIVATE KEY-----
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 17 al 18: ssh -i key bandit17@bandit.labs.overthewire.org -p 2220
+contraseña: 
+comandos: 
+
+vim key - pegar dentro lo encontrado en el nivel anterior
+chmod 400 key
+ssh -i key bandit17@bandit.labs.overthewire.org -p 2220
+diff passwords.old passwords.new
+exit
+ssh bandit18@bandit.labs.overthewire.org -p 222
+
+contraseña encontrada: hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 18 al 19: ssh bandit18@bandit.labs.overthewire.org -p 2220
+contraseña: hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
+comandos: 
+
+ssh bandit18@bandit.labs.overthewire.org -p 2220 ls
+ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
+
+contraseña encontrada: awhqfNnAbc1naukrpqDYcF95h7HoMTrC
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 19 al 20: ssh bandit19@bandit.labs.overthewire.org -p 2220
+contraseña: awhqfNnAbc1naukrpqDYcF95h7HoMTrC
+comandos: 
+
+ls -la
+./bandit20-do
+./bandit20-do ls /etc/bandit_pass
+./bandit20-do cat /etc/bandit_pass/bandit20
+
+contraseña encontrada: VxCazJaVykI6W36BkBU0mJTCM8rR95XT
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 20 al 21: ssh bandit20@bandit.labs.overthewire.org -p 2220
+contraseña: VxCazJaVykI6W36BkBU0mJTCM8rR95XT
+comandos: 
+
+echo -n 'VxCazJaVykI6W36BkBU0mJTCM8rR95XT' | nc -l -p 1234 &
+./suconnect 1234
+
+contraseña encontrada: NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 21 al 22: ssh bandit21@bandit.labs.overthewire.org -p 2220
+contraseña: NvEJF7oVjkddltPSrdKEFOllh9V1IBcq
+comandos: 
+
+ls -la /etc/cron.d
+cat /etc/cron.d/cronjob_bandit22
+cat /usr/bin/cronjob_bandit22.sh
+cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+
+contraseña encontrada: WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 22 al 23: ssh bandit22@bandit.labs.overthewire.org -p 2220
+contraseña: WdDozAdTM2z9DiFEQ2mGlwngMfj4EZff
+comandos: 
+
+ls -la /etc/cron.d
+cat /etc/cron.d/cronjob_bandit23
+cat /usr/bin/cronjob_bandit23.sh
+echo I am user bandit23 | md5sum | cut -d ' ' -f 1
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+
+contraseña encontrada: QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 23 al 24: ssh bandit23@bandit.labs.overthewire.org -p 2220
+contraseña: QYw0Y2aiA672PsMmh9puTQuhoz8SyR2G
+comandos:
+ 
+ls -la /etc/cron.d
+cat /etc/cron.d/cronjob_bandit24
+cat /usr/bin/cronjob_bandit24.sh
+mkdir /tmp/ken
+cd /tmp/ken
+nano pass.sh
+
+pegar:
+#!/bin/bash
+cat /etc/bandit_pass/bandit24 > /tmp/ken/pass_file
+
+chmod +rwx pass.sh 
+chmod 777 pass.sh
+chmod 777 /tmp/ken
+touch pass_file
+chmod 777 pass_file
+cp pass.sh /var/spool/bandit24/foo/pass.sh
+cat pass_file
+
+contraseña encontrada: VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar   
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 24 al 25: ssh bandit24@bandit.labs.overthewire.org -p 2220
+contraseña: VAfGXJ1PBSsPSnvsjI8p759leLZ9GGar
+comandos: 
+
+mktemp -d
+cd /tmp/tmp.IB6mUFr4oX
+nano brute.sh
+
+pegar:
+#!/bin/bash
+
+password=$(cat /etc/bandit_pass/bandit24)
+
+for i in $(seq -w 9999);
+do
+    echo "$password $i"
+done | nc localhost 30002
+
+chmod +rwx brute.sh
+./brute.sh
+
+contraseña encontrada: p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 25 al 26: ssh bandit25@bandit.labs.overthewire.org -p 2220
+contraseña: p7TaowMYrmu23Ol8hiZh9UvD0O9hpx8d
+comandos: 
+
+cat /etc/passwd | grep bandit26
+ls -la /usr/bin/showtext
+cat /usr/bin/showtext
+ls
+chmod 700 bandit26.sshkey
+ssh -t -i bandit26.sshkey bandit26@bandit.labs.overthewire.org -p 2220 /bin/sh 
+minimizar la ventana a cierto puento hasta que salga el apartdo more, por ejemplo more(60%), siguiente:
+presionar la letra v
+presionar ESC
+Poner el siguiente comando
+:set shell=/bin/bash 
+:shell
+cat /etc/bandit_pass/bandit26
+
+contraseña encontrada: c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 26 al 27: ssh bandit26@bandit.labs.overthewire.org -p 2220
+contraseña: c7GvcKlw9mC7aUQaPx7nwFstuAIBw1o1
+comandos: 
+
+ls
+./bandit27-do
+./bandit27-do cat /etc/bandit_pass/bandit27
+
+contraseña encontrada: YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 27 al 28: ssh bandit27@bandit.labs.overthewire.org -p 2220
+contraseña: YnQpBuifNMas1hcUFk70ZmqkhUU2EuaS
+comandos: 
+
+mktemp -d
+cd /tmp/tmp.o9MHDXhNiy
+git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo
+cd repo
+cat README
+
+contraseña encontrada: AVanL161y9rsbcJIsFHuw35rjaOM19nR
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 28 al 29: ssh bandit28@bandit.labs.overthewire.org -p 2220
+contraseña: AVanL161y9rsbcJIsFHuw35rjaOM19nR
+comandos: 
+
+mktemp -d
+cd /tmp/tmp.ZM5imKQMeG
+git clone ssh://bandit28-git@localhost:2220/home/bandit28-git/repo
+cd repo
+cat README.md
+git log
+git show 14f754b3ba6531a2b89df6ccae6446e8969a41f3
+
+contraseña encontrada: tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 29 al 30: ssh bandit29@bandit.labs.overthewire.org -p 2220
+contraseña: tQKvmcwNYcFS6vmPHIUSI3ShmsrQZK8S
+comandos: 
+
+mktemp -d
+cd /tmp/tmp.Pqb7RyhyDt
+git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo
+cd repo
+cat README.md
+git branch -a
+git checkout dev
+cat README.md
+
+contraseña encontrada: xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 30 al 31: ssh bandit30@bandit.labs.overthewire.org -p 2220
+contraseña: xbhV3HpNGlTIdnjUrdAlPzc2L6y9EOnS
+comandos: 
+
+mktemp -d
+cd /tmp/tmp.lbvhj4brs8
+git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo
+cd repo
+cat README.md
+git tag
+git show secret
+
+contraseña encontrada: OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 31 al 32: ssh bandit31@bandit.labs.overthewire.org -p 2220
+contraseña: OoffzGDlzhAlerFJ2cAiz1D41JW1Mhmt
+comandos: 
+
+mktemp -d
+cd /tmp/tmp.43tyEIC1Ta
+git clone ssh://bandit31-git@localhost:2220/home/bandit31-git/repo
+cd repo
+cat README.md
+echo 'May I come in?' > key.txt
+cat key.txt
+cat .gitignore
+git add -f key.txt
+git commit -a
+
+poner dentro: password
+
+git push -u origin master
+
+contraseña encontrada: rmCBvG56y58BXzv98yZGdO7ATVL5dW8y
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 32 al 33: ssh bandit32@bandit.labs.overthewire.org -p 2220
+contraseña: rmCBvG56y58BXzv98yZGdO7ATVL5dW8y
+comandos: 
+
+$0
+ls -al
+whoami
+cat /etc/bandit_pass/bandit33
+
+contraseña encontrada: odHo63fHiFqcWWJG9rLiLDtPm45KzUKy
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+codigo del nivel 33 al 34:
+
+No existe
